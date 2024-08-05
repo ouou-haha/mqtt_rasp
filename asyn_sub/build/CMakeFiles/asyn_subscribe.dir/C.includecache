@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ou/Desktop/mqtt/test/asyn_sub/src/asyn_sub.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+pthread.h
+-
+unistd.h
+-
+MQTTAsync.h
+/home/ou/Desktop/mqtt/test/asyn_sub/src/MQTTAsync.h
+

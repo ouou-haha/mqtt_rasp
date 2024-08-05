@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/mqtt_publisher.dir/src/app1.c.o  -o mqtt_publisher -lpaho-mqtt3as -lpthread 

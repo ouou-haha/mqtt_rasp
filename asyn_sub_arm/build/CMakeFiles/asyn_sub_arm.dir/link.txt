@@ -1,0 +1,1 @@
+aarch64-linux-gnu-gcc    CMakeFiles/asyn_sub_arm.dir/asyn_sub.c.o  -o asyn_sub_arm  -L/usr/aarch64-linux-gun/lib -Wl,-rpath,/usr/aarch64-linux-gun/lib:/usr/aarch64-linux-gnu/lib /usr/aarch64-linux-gnu/lib/libpaho-mqtt3as.so.1 -lpthread -ldl 

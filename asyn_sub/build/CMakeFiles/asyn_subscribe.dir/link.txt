@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/asyn_subscribe.dir/src/asyn_sub.c.o  -o asyn_subscribe -lpaho-mqtt3as -lpthread 
