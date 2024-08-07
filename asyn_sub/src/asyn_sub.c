@@ -193,29 +193,62 @@ void* check_input(void* arg) {
 }
 
 void* process_messages(void* arg) {
-    while (running || message_queue.cur_count > 0) {
+    
+	int file_count = 0;
+	int message_count = 0;
+	FILE* file = fopen("output_1.txt", "w");
+	if(file == NULL){
+		printf("fail to open file output_1.txt\n");
+		pthread_exit(NULL);
+	}
+
+	while (running || message_queue.cur_count > 0) {
         char* message = dequeue(&message_queue);
         if (message) {
             // Process the message here
+			fprintf(file, "%s\n", message);
             free(message);
+			message_count++;
+
+			if(message_count >= 100000){
+				fclose(file);
+				message_count = 0;
+				file_count++;
+				char file_name[50];
+				snprintf(file_name, sizeof(file_name), "output_%d.txt", file_count);
+				file = fopen(file_name, "w");
+				if(file == NULL){
+					printf("fail to open file output_%d.txt\n", file_count);
+					pthread_exit(NULL);
+				}
+			}
         }
     }
 
     // Save remaining messages
-    FILE* file = fopen("output.txt", "w");
-    if (file != NULL) {
-        while (message_queue.cur_count > 0) {
-            char* message = dequeue(&message_queue);
-            if (message) {
-                //fprintf(file, "%s\n", message);
-                free(message);
+    while (message_queue.cur_count > 0) {
+        char* message = dequeue(&message_queue);
+        if (message) {
+            fprintf(file, "%s\n", message);
+            free(message);
+            message_count++;
+
+            if (message_count >= 10000) {
+                fclose(file);
+                message_count = 0;
+                file_count++;
+                char filename[50];
+                snprintf(filename, sizeof(filename), "output_%d.txt", file_count);
+                file = fopen(filename, "w");
+                if (file == NULL) {
+                    printf("Failed to open file\n");
+                    pthread_exit(NULL);
+                }
             }
         }
-        fclose(file);
-        printf("Saved data to file successfully\n");
-    } else {
-        printf("Failed to open file\n");
     }
+    fclose(file);
+    printf("Saved data to file successfully\n");
 
     printf("Total messages: %d\n", message_queue.count);
     clock_gettime(CLOCK_REALTIME, &ts);

@@ -79,10 +79,17 @@ void* publish_messages(void* threadid)
         struct tm* tm_info;
         char time_buffer[40];
 
-        clock_gettime(CLOCK_REALTIME, &ts);
-        tm_info = localtime(&ts.tv_sec);
-        strftime(time_buffer, 40, " %H:%M:%S", tm_info);
-        sprintf(message_payload, "Client %ld, Timestamp: %s.%03ld", tid, time_buffer, ts.tv_nsec / 1000000);
+        //clock_gettime(CLOCK_REALTIME, &ts);
+        //tm_info = localtime(&ts.tv_sec);
+        //strftime(time_buffer, 40, " %H:%M:%S", tm_info);
+        //sprintf(message_payload, "Client %ld, Timestamp: %s.%03ld", tid, time_buffer, ts.tv_nsec / 1000000);
+    
+		// 获取当前时间戳
+    	clock_gettime(CLOCK_REALTIME, &ts);
+    	long timestamp = ts.tv_sec * 1000000000L + ts.tv_nsec; // 转换为纳秒
+
+    	// 创建消息负载
+    	sprintf(message_payload, "Client %ld, Timestamp: %ld", tid, timestamp);
 
         pubmsg.payload = message_payload;
         pubmsg.payloadlen = (int)strlen(message_payload);
