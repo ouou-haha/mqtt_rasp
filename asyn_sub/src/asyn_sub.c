@@ -8,7 +8,7 @@
 #define ADDRESS     "tcp://192.168.99.36:1883"
 #define CLIENTID    "ExampleClientSub_x86"
 #define TOPIC       "data/time"
-#define QOS         1
+#define QOS         0
 #define TIMEOUT     10000L
 
 struct timespec ts;

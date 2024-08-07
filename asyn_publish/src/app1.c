@@ -27,7 +27,7 @@
 #define CLIENTID    "ExampleClientPub"
 #define TOPIC       "data/time"
 #define PAYLOAD     "Hello World!"
-#define QOS         1
+#define QOS         0
 #define TIMEOUT     10000L
 #define NUM_THREADS 30
 
@@ -46,8 +46,8 @@ void* publish_messages(void* threadid)
 {
     long tid = (long)threadid;
     MQTTAsync client;
-    char clientId[24];
-    char message_payload[256];
+    char clientId[60];
+    char message_payload[200];
     sprintf(clientId, "%s_%ld", CLIENTID, tid);
 
     MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
@@ -94,14 +94,13 @@ void* publish_messages(void* threadid)
 
         if ((rc = MQTTAsync_sendMessage(client, TOPIC, &pubmsg, &opts)) != MQTTASYNC_SUCCESS)
         {
-            //printf("Thread %ld: Failed to send message, return code %d\n", tid, rc);
-        }else{
-			count++;
-		}
-        if (count == 20000) {
-            flag = 1;
-            printf("client %ld finished \n", tid);
+            printf("Thread %ld: Failed to send message, return code %d\n", tid, rc);
         }
+		count++;
+        //if (count == 20000) {
+        //    flag = 1;
+        //    printf("client %ld finished \n", tid);
+        //}
         atomic_fetch_add(&total_count, 1);
         usleep(10000); // 10ms delay for 100Hz
     }
