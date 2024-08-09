@@ -4,12 +4,14 @@
 #include <pthread.h>
 #include <unistd.h>
 #include "MQTTAsync.h"
+#include <librdkafka/rdkafka.h>  // Kafka 头文件
 
 #define ADDRESS     "tcp://192.168.99.36:1883"
 #define CLIENTID    "ExampleClientSub_x86"
 #define TOPIC       "data/time"
 #define QOS         0
 #define TIMEOUT     10000L
+
 
 struct timespec ts;
 struct tm* tm_info;
@@ -28,6 +30,9 @@ typedef struct {
     int count;
 	int cur_count;
 } MessageQueue;
+
+
+
 
 void initQueue(MessageQueue* queue) {
     queue->head = NULL;
@@ -98,8 +103,9 @@ char* password = "szu123456";
 int disc_finished = 0;
 int subscribed = 0;
 int finished = 0;
+int total_message = 0;
 
-
+void onConnect(void* context, MQTTAsync_successData* response);
 void onConnect(void* context, MQTTAsync_successData* response);
 void onConnectFailure(void* context, MQTTAsync_failureData* response);
 
@@ -201,11 +207,12 @@ void* process_messages(void* arg) {
 		printf("fail to open file output_1.txt\n");
 		pthread_exit(NULL);
 	}
-
 	while (running || message_queue.cur_count > 0) {
         char* message = dequeue(&message_queue);
         if (message) {
             // Process the message here
+
+			// writr to file
 			fprintf(file, "%s\n", message);
             free(message);
 			message_count++;
@@ -255,7 +262,6 @@ void* process_messages(void* arg) {
     tm_info = localtime(&ts.tv_sec);
     strftime(time_buffer, 40, " %H:%M:%S", tm_info);
     printf("End time: %s.%03ld\n", time_buffer, ts.tv_nsec / 1000000);
-
     pthread_exit(NULL);
 }
 
@@ -337,7 +343,4 @@ destroy_exit:
 exit:
     return rc;
 }
-
-
-
 

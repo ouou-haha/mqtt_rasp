@@ -41,7 +41,18 @@ void onSendFailure(void* context, MQTTAsync_failureData* response);
 void onSend(void* context, MQTTAsync_successData* response);
 void onConnectFailure(void* context, MQTTAsync_failureData* response);
 void onConnect(void* context, MQTTAsync_successData* response);
-
+double x = 0.2595;
+double y = -0.1238;
+double z = 0.0428;
+double w = 0.9568;
+double ax = 2.5800;
+double ay = 4.8700;
+double az = 8.1300;
+double gx = -2.2500;
+double gy = -0.6875;
+double gz = -1.0625;
+int s = 0;
+double p = 99.676;
 void* publish_messages(void* threadid)
 {
     long tid = (long)threadid;
@@ -85,11 +96,16 @@ void* publish_messages(void* threadid)
         //sprintf(message_payload, "Client %ld, Timestamp: %s.%03ld", tid, time_buffer, ts.tv_nsec / 1000000);
     
 		// 获取当前时间戳
-    	clock_gettime(CLOCK_REALTIME, &ts);
-    	long timestamp = ts.tv_sec * 1000000000L + ts.tv_nsec; // 转换为纳秒
+		clock_gettime(CLOCK_REALTIME, &ts);
+		long timestamp = ts.tv_sec * 1000L + ts.tv_nsec / 1000000L; // 转换为毫秒
 
-    	// 创建消息负载
-    	sprintf(message_payload, "Client %ld, Timestamp: %ld", tid, timestamp);
+		// 创建 JSON 格式的消息负载
+		sprintf(message_payload, 
+    		"{\"n\":\"%ld\",\"x\":\"%.4f\",\"y\":\"%.4f\",\"z\":\"%.4f\",\"w\":\"%.4f\","
+    		"\"ax\":\"%.4f\",\"ay\":\"%.4f\",\"az\":\"%.4f\","
+    		"\"gx\":\"%.4f\",\"gy\":\"%.4f\",\"gz\":\"%.4f\","
+    		"\"s\":\"%d\",\"p\":\"%.4f\",\"timestamp\":\"%ld\"}",
+    		tid, x, y, z, w, ax, ay, az, gx, gy, gz, s, p, timestamp);
 
         pubmsg.payload = message_payload;
         pubmsg.payloadlen = (int)strlen(message_payload);

@@ -15,5 +15,5 @@ file(GLOB SRC_FILES "src/*.c")
 add_executable(asyn_subscribe ${SRC_FILES})
 
 # 链接到必要的库
-target_link_libraries(asyn_subscribe paho-mqtt3as pthread)
+target_link_libraries(asyn_subscribe paho-mqtt3as pthread rdkafka)
 

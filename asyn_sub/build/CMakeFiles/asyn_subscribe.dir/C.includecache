@@ -19,4 +19,6 @@ unistd.h
 -
 MQTTAsync.h
 /home/ou/Desktop/mqtt/test/asyn_sub/src/MQTTAsync.h
+librdkafka/rdkafka.h
+-
 

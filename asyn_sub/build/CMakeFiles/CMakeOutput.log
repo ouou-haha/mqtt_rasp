@@ -15,28 +15,28 @@ The C compiler identification is GNU, found in "/home/ou/Desktop/mqtt/test/asyn_
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9a0e9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9a0e9.dir/build.make CMakeFiles/cmTC_9a0e9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_036e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_036e4.dir/build.make CMakeFiles/cmTC_036e4.dir/build
 make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_9a0e9.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_9a0e9.dir/testCCompiler.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_9a0e9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a0e9.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_9a0e9.dir/testCCompiler.c.o  -o cmTC_9a0e9 
+Building C object CMakeFiles/cmTC_036e4.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_036e4.dir/testCCompiler.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_036e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_036e4.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_036e4.dir/testCCompiler.c.o  -o cmTC_036e4 
 make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3e78b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3e78b.dir/build.make CMakeFiles/cmTC_3e78b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e457c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e457c.dir/build.make CMakeFiles/cmTC_e457c.dir/build
 make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_3e78b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e78b.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o  -o cmTC_3e78b 
+Building C object CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_e457c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e457c.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o  -o cmTC_e457c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -48,9 +48,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3e78b' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuA7o2E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3e78b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3e78b' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e457c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIMINAi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e457c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e457c' '-mtune=generic' '-march=x86-64'
 make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
 
 
@@ -58,14 +58,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3e78b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3e78b.dir/build.make CMakeFiles/cmTC_3e78b.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e457c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e457c.dir/build.make CMakeFiles/cmTC_e457c.dir/build]
   ignore line: [make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”]
-  ignore line: [Building C object CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_3e78b]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e78b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o  -o cmTC_3e78b ]
+  ignore line: [Building C object CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_e457c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e457c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o  -o cmTC_e457c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -77,13 +77,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3e78b' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuA7o2E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3e78b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e457c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIMINAi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e457c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccuA7o2E.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccIMINAi.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -101,7 +101,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_3e78b] ==> ignore
+    arg [cmTC_e457c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -113,7 +113,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_3e78b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_e457c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -145,14 +145,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bac8f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bac8f.dir/build.make CMakeFiles/cmTC_bac8f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1833a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1833a.dir/build.make CMakeFiles/cmTC_1833a.dir/build
 make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_bac8f.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_bac8f.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_bac8f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bac8f.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_bac8f.dir/feature_tests.c.o  -o cmTC_bac8f 
+Building C object CMakeFiles/cmTC_1833a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_1833a.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1833a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1833a.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_1833a.dir/feature_tests.c.o  -o cmTC_1833a 
 make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
 
 
@@ -165,14 +165,14 @@ make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMa
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2244c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2244c.dir/build.make CMakeFiles/cmTC_2244c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8a45a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a45a.dir/build.make CMakeFiles/cmTC_8a45a.dir/build
 make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_2244c.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_2244c.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2244c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2244c.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_2244c.dir/feature_tests.c.o  -o cmTC_2244c 
+Building C object CMakeFiles/cmTC_8a45a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_8a45a.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8a45a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a45a.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_8a45a.dir/feature_tests.c.o  -o cmTC_8a45a 
 make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
 
 
@@ -185,14 +185,14 @@ make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMa
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_93433/fast"
-/usr/bin/make -f CMakeFiles/cmTC_93433.dir/build.make CMakeFiles/cmTC_93433.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_78237/fast"
+/usr/bin/make -f CMakeFiles/cmTC_78237.dir/build.make CMakeFiles/cmTC_78237.dir/build
 make[1]: 进入目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_93433.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_93433.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_93433
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93433.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_93433.dir/feature_tests.c.o  -o cmTC_93433 
+Building C object CMakeFiles/cmTC_78237.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_78237.dir/feature_tests.c.o   -c /home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_78237
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78237.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_78237.dir/feature_tests.c.o  -o cmTC_78237 
 make[1]: 离开目录“/home/ou/Desktop/mqtt/test/asyn_sub/build/CMakeFiles/CMakeTmp”
 
 
