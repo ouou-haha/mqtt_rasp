@@ -343,4 +343,3 @@ destroy_exit:
 exit:
     return rc;
 }
-
