@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mqtt_publisher.dir/src/app1.c.o"
-  "mqtt_publisher.pdb"
+  "CMakeFiles/mqtt_publisher.dir/src/app1.c.o.d"
   "mqtt_publisher"
+  "mqtt_publisher.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

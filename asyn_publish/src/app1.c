@@ -22,14 +22,15 @@
 #include <time.h>
 #include <stdatomic.h>
 #include "MQTTAsync.h"
+#include <math.h>
 
-#define ADDRESS     "tcp://192.168.99.36:1883"
+#define ADDRESS     "tcp://10.3.5.22:1883"
 #define CLIENTID    "ExampleClientPub"
 #define TOPIC       "data/time"
 #define PAYLOAD     "Hello World!"
-#define QOS         0
+#define QOS         1
 #define TIMEOUT     10000L
-#define NUM_THREADS 30
+#define NUM_THREADS 3
 
 char* username = "admin";
 char* password = "szu123456";
@@ -53,9 +54,19 @@ double gy = -0.6875;
 double gz = -1.0625;
 int s = 0;
 double p = 99.676;
-void* publish_messages(void* threadid)
+
+typedef struct {
+    long tid;
+    const char* name;
+} ThreadArgs;
+
+
+void* publish_messages(void* args)
 {
-    long tid = (long)threadid;
+	ThreadArgs* arg = (ThreadArgs*) args;
+
+    long tid = arg->tid;
+	const char* name = arg->name;
     MQTTAsync client;
     char clientId[60];
     char message_payload[200];
@@ -71,8 +82,8 @@ void* publish_messages(void* threadid)
 
     conn_opts.keepAliveInterval = 20;
     conn_opts.cleansession = 1;
-    conn_opts.username = username;
-    conn_opts.password = password;
+    //conn_opts.username = username;
+    //conn_opts.password = password;
     conn_opts.onSuccess = onConnect;
     conn_opts.onFailure = onConnectFailure;
     conn_opts.context = client;
@@ -99,13 +110,25 @@ void* publish_messages(void* threadid)
 		clock_gettime(CLOCK_REALTIME, &ts);
 		long timestamp = ts.tv_sec * 1000L + ts.tv_nsec / 1000000L; // 转换为毫秒
 
+		
+		// 使用时间戳（或其他动态值）生成三角函数波动
+		double t = ts.tv_sec + ts.tv_nsec / 1e9; // 秒级时间戳，带小数
+
+		// 使用三角函数生成波动值
+		double x = 5 * sin(t);       // 正弦波
+		double y = 5 * cos(t);       // 余弦波
+		double z = 5 * sin(t + 3.14); // 相位偏移的正弦波（等同于 cos）
+
+
+
+
 		// 创建 JSON 格式的消息负载
 		sprintf(message_payload, 
-    		"{\"n\":\"%ld\",\"x\":\"%.4f\",\"y\":\"%.4f\",\"z\":\"%.4f\",\"w\":\"%.4f\","
-    		"\"ax\":\"%.4f\",\"ay\":\"%.4f\",\"az\":\"%.4f\","
+    		"{\"n\":\"%s\",\"x\":\"%.4f\",\"y\":\"%.4f\",\"z\":\"%.4f\",\"w\":\"%.4f\","
+    		"\"accx\":\"%.4f\",\"accy\":\"%.4f\",\"accz\":\"%.4f\","
     		"\"gx\":\"%.4f\",\"gy\":\"%.4f\",\"gz\":\"%.4f\","
     		"\"s\":\"%d\",\"p\":\"%.4f\",\"timestamp\":\"%ld\"}",
-    		tid, x, y, z, w, ax, ay, az, gx, gy, gz, s, p, timestamp);
+    		name, x, y, z, w, ax, ay, az, gx, gy, gz, s, p, timestamp);
 
         pubmsg.payload = message_payload;
         pubmsg.payloadlen = (int)strlen(message_payload);
@@ -172,11 +195,12 @@ void* print_count(void* arg)
 
 int main(int argc, char* argv[])
 {
-    pthread_t threads[NUM_THREADS];
+    pthread_t threads[50];
+	ThreadArgs args[50]; // 每个线程的参数
     pthread_t thread_count;
     int rc;
     long t;
-
+#if 0
     for (t = 0; t < NUM_THREADS; t++)
     {
         rc = pthread_create(&threads[t], NULL, publish_messages, (void*)t);
@@ -186,8 +210,71 @@ int main(int argc, char* argv[])
             exit(-1);
         }
     }
+#endif
 
-    // 创建打印线程
+
+    args[0].tid = 0;                                                                                                                                                            
+    args[0].name = "123";                                                                                                                                                       
+    rc = pthread_create(&threads[0], NULL, publish_messages, &args[0]);                                                                                                         
+
+    args[1].tid = 1;                                                                                                                                                            
+    args[1].name = "456";                                                                                                                                                       
+    rc = pthread_create(&threads[1], NULL, publish_messages, &args[1]);                                                                                                         
+
+    args[2].tid = 2;                                                                                                                                                            
+    args[2].name = "789";                                                                                                                                                       
+    rc = pthread_create(&threads[2], NULL, publish_messages, &args[2]);                                                                                                         
+
+#if 0
+    args[3].tid = 3;                                                                                                                                                            
+    args[3].name = "114";                                                                                                                                                       
+    rc = pthread_create(&threads[3], NULL, publish_messages, &args[3]);                                                                                                         
+
+    args[4].tid = 4;                                                                                                                                                            
+    args[4].name = "115";                                                                                                                                                       
+    rc = pthread_create(&threads[4], NULL, publish_messages, &args[4]);                                                                                                         
+
+    args[5].tid = 5;                                                                                                                                                            
+    args[5].name = "116";                                                                                                                                                       
+    rc = pthread_create(&threads[5], NULL, publish_messages, &args[5]);                                                                                                         
+
+    args[6].tid = 6;                                                                                                                                                            
+    args[6].name = "117";                                                                                                                                                       
+    rc = pthread_create(&threads[6], NULL, publish_messages, &args[6]);                                                                                                         
+
+    args[7].tid = 7;                                                                                                                                                            
+    args[7].name = "118";                                                                                                                                                       
+    rc = pthread_create(&threads[7], NULL, publish_messages, &args[7]);                                                                                                         
+
+    args[8].tid = 8;                                                                                                                                                            
+    args[8].name = "119";                                                                                                                                                       
+    rc = pthread_create(&threads[8], NULL, publish_messages, &args[8]);                                                                                                         
+
+    args[9].tid = 9;                                                                                                                                                            
+    args[9].name = "120";                                                                                                                                                       
+    rc = pthread_create(&threads[9], NULL, publish_messages, &args[9]);                                                                                                         
+
+    args[10].tid = 10;                                                                                                                                                          
+    args[10].name = "121";                                                                                                                                                      
+    rc = pthread_create(&threads[10], NULL, publish_messages, &args[10]);                                                                                                       
+
+    args[11].tid = 11;                                                                                                                                                          
+    args[11].name = "122";                                                                                                                                                      
+    rc = pthread_create(&threads[11], NULL, publish_messages, &args[11]);                                                                                                       
+
+    args[12].tid = 12;                                                                                                                                                          
+    args[12].name = "123";                                                                                                                                                      
+    rc = pthread_create(&threads[12], NULL, publish_messages, &args[12]);                                                                                                       
+
+    args[13].tid = 13;                                                                                                                                                          
+    args[13].name = "124";                                                                                                                                                      
+    rc = pthread_create(&threads[13], NULL, publish_messages, &args[13]);                                                                                                       
+
+    args[14].tid = 14;                                                                                                                                                          
+    args[14].name = "125";                                                                                                                                                      
+    rc = pthread_create(&threads[14], NULL, publish_messages, &args[14]);                                                                                                       
+#endif
+	// 创建打印线程
     rc = pthread_create(&thread_count, NULL, print_count, NULL);
     if (rc)
     {
